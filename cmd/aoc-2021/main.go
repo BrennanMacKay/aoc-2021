@@ -7,6 +7,7 @@ import (
 	"github.com/BrennanMacKay/aoc-2021/internal/d10"
 	"github.com/BrennanMacKay/aoc-2021/internal/d11"
 	"github.com/BrennanMacKay/aoc-2021/internal/d12"
+	"github.com/BrennanMacKay/aoc-2021/internal/d13"
 	"github.com/BrennanMacKay/aoc-2021/internal/d2"
 	"github.com/BrennanMacKay/aoc-2021/internal/d3"
 	"github.com/BrennanMacKay/aoc-2021/internal/d4"
@@ -51,6 +52,8 @@ func main() {
 		os.Exit(d11.Day11(os.Args[2:]))
 	case "d12":
 		os.Exit(d12.Day12(os.Args[2:]))
+	case "d13":
+		os.Exit(d13.Day13(os.Args[2:]))
 	default:
 		fmt.Printf("%s did not match a known problem\n", os.Args[1])
 		os.Exit(1)
