@@ -89,8 +89,6 @@ func part2(args []string) int {
 			points = foldUp(points, f.value)
 			bound.y = f.value - 1
 		}
-		fmt.Println(bound)
-		fmt.Println(points)
 
 		g = buildGrid(points, bound)
 		printGrid(g)
@@ -185,7 +183,7 @@ func readInput(input []string) ([]point, []fold) {
 	points := make([]point, 0)
 	folds := make([]fold, 0)
 
-	for i, line := range input {
+	for _, line := range input {
 		switch {
 		case pRegex.MatchString(line):
 			parts := pRegex.FindStringSubmatch(line)
@@ -196,8 +194,6 @@ func readInput(input []string) ([]point, []fold) {
 			parts := fRegex.FindStringSubmatch(line)
 			pos, _ := strconv.Atoi(parts[2])
 			folds = append(folds, fold{parts[1], pos})
-		default:
-			fmt.Println("Unknown", line, i)
 		}
 	}
 
