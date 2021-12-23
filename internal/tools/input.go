@@ -34,3 +34,12 @@ func ConvertToInt(input []string) []int {
 
 	return output
 }
+
+func ToInt(input string) int {
+	var parsed, err = strconv.Atoi(input)
+	if err != nil {
+		panic(err)
+	}
+
+	return parsed
+}
